@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electric Circuits - Worked Examples | Professor Zakeyo</title>
+    <link rel="stylesheet" href="../../assets/css/dashboard.css">
+    <link rel="stylesheet" href="../../assets/css/page.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .example-box { background: #f0f8ff; border-left: 4px solid #2563eb; padding: 1rem 1.5rem; margin: 1rem 0; border-radius: 0 8px 8px 0; }
+        .practice-box { background: #fefce8; border-left: 4px solid #eab308; padding: 1rem 1.5rem; margin: 1rem 0; border-radius: 0 8px 8px 0; }
+        .answer-box { background: #f0fdf4; border-left: 4px solid #22c55e; padding: 1rem 1.5rem; margin: 1rem 0; border-radius: 0 8px 8px 0; display: none; }
+        .answer-box.show { display: block; }
+        .formula { font-family: 'Courier New', monospace; background: #1e293b; color: #e2e8f0; padding: 0.5rem 1rem; border-radius: 6px; display: inline-block; margin: 0.5rem 0; }
+        .step { margin: 0.5rem 0; padding-left: 1rem; border-left: 2px dashed #94a3b8; }
+        .answer-btn { background: #22c55e; color: white; border: none; padding: 0.4rem 1rem; border-radius: 6px; cursor: pointer; font-size: 0.85rem; }
+        .answer-btn:hover { background: #16a34a; }
+        .mcq { background: #f8fafc; padding: 0.8rem; border-radius: 8px; margin: 0.4rem 0; }
+        .mcq label { display: block; padding: 0.3rem 0.5rem; cursor: pointer; border-radius: 4px; }
+        .mcq label:hover { background: #e2e8f0; }
+        .mcq input { margin-right: 0.5rem; }
+        .section-divider { border: none; border-top: 2px solid #e2e8f0; margin: 2rem 0; }
+        .key-concept { background: #ede9fe; border-radius: 8px; padding: 1rem; margin: 0.5rem 0; border: 1px solid #c4b5fd; }
+        .key-concept strong { color: #6d28d9; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="../../pages/dashboard-education.html" class="back-link">← Back to Education</a>
+            <h1>⚡ Electric Circuits — Worked Examples & Practice</h1>
+            <p>Grade 12 IEB Physics | Term 3</p>
+        </div>
+
+        <!-- Key Formulas -->
+        <div class="dashboard-section">
+            <h2>📌 Key Formulas</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 0.8rem;">
+                <div class="key-concept"><strong>Ohm's Law:</strong> V = I × R</div>
+                <div class="key-concept"><strong>Emf:</strong> ε = I(R + r) = V + Ir</div>
+                <div class="key-concept"><strong>Series:</strong> R<sub>T</sub> = R₁ + R₂ + R₃</div>
+                <div class="key-concept"><strong>Parallel:</strong> 1/R<sub>T</sub> = 1/R₁ + 1/R₂</div>
+                <div class="key-concept"><strong>Power:</strong> P = VI = I²R = V²/R</div>
+                <div class="key-concept"><strong>Energy:</strong> E = P × t (kWh)</div>
+            </div>
+        </div>
+
+        <!-- Worked Example 1 -->
+        <div class="dashboard-section">
+            <h2>Worked Example 1: Ohm's Law</h2>
+            <div class="example-box">
+                <p>A 12 V battery is connected across a resistor. An ammeter reads 2.5 A.</p>
+                <p><strong>1.1</strong> Calculate the resistance of the resistor. <em>(3)</em></p>
+                <p><strong>1.2</strong> If the resistor is replaced with a 2 Ω resistor, calculate the new current. <em>(3)</em></p>
+                <p><strong>1.3</strong> Explain why the current increases when the resistance decreases. <em>(2)</em></p>
+                <button class="answer-btn" onclick="toggleAnswer('ans1')">Show Answers</button>
+                <div id="ans1" class="answer-box">
+                    <p><strong>1.1</strong> R = V/I = 12/2.5 = <strong>4.8 Ω</strong> ✓</p>
+                    <p><strong>1.2</strong> I = V/R = 12/2 = <strong>6 A</strong> ✓</p>
+                    <p><strong>1.3</strong> Ohm's Law states I ∝ V (at constant temperature). For the same voltage, decreasing resistance allows more current to flow — less opposition to electron flow. ✓</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Worked Example 2 -->
+        <div class="dashboard-section">
+            <h2>Worked Example 2: Internal Resistance</h2>
+            <div class="example-box">
+                <p>A battery has an emf of 24 V and an internal resistance of 0.8 Ω. It is connected to a 5.2 Ω external resistor.</p>
+                <p><strong>2.1</strong> Define emf. <em>(2)</em></p>
+                <p><strong>2.2</strong> Calculate the current in the circuit. <em>(3)</em></p>
+                <p><strong>2.3</strong> Calculate the terminal voltage of the battery. <em>(3)</em></p>
+                <p><strong>2.4</strong> A second 5.2 Ω resistor is connected in parallel with the first. How does the terminal voltage change? Explain. <em>(4)</em></p>
+                <button class="answer-btn" onclick="toggleAnswer('ans2')">Show Answers</button>
+                <div id="ans2" class="answer-box">
+                    <p><strong>2.1</strong> The total energy supplied per coulomb of charge by the cell/battery, measured in volts when no current flows (open circuit). ✓</p>
+                    <p><strong>2.2</strong> ε = I(R + r) → 24 = I(5.2 + 0.8) → 24 = 6I → I = <strong>4 A</strong> ✓</p>
+                    <p><strong>2.3</strong> V = ε - Ir = 24 - (4 × 0.8) = 24 - 3.2 = <strong>20.8 V</strong> ✓</p>
+                    <p><strong>2.4</strong> R<sub>p</sub> = (5.2 × 5.2)/(5.2 + 5.2) = 2.6 Ω. ε = I(2.6 + 0.8) → 24 = 3.4I → I = 7.06 A. V = 24 - (7.06 × 0.8) = <strong>18.35 V</strong> ✓<br>The terminal voltage <strong>DECREASES</strong> because more current is drawn, causing a larger voltage drop across the internal resistance. ✓</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Worked Example 3 -->
+        <div class="dashboard-section">
+            <h2>Worked Example 3: Combination Circuits</h2>
+            <div class="example-box">
+                <pre style="font-size: 0.9rem;">
+          ┌─── 6Ω ───┐
+          │           │
+    ──────┤           ├──────
+          │           │
+          └─── 3Ω ────┘
+          │           │
+          └─── R ─────┘
+
+          V = 18 V</pre>
+                <p>Three resistors (6 Ω, 3 Ω, and R) are connected in parallel across an 18 V battery. The total current is 12 A.</p>
+                <p><strong>3.1</strong> Calculate the current through the 6 Ω resistor. <em>(3)</em></p>
+                <p><strong>3.2</strong> Calculate the current through the 3 Ω resistor. <em>(3)</em></p>
+                <p><strong>3.3</strong> Determine the value of resistor R. <em>(4)</em></p>
+                <button class="answer-btn" onclick="toggleAnswer('ans3')">Show Answers</button>
+                <div id="ans3" class="answer-box">
+                    <p><strong>3.1</strong> I = V/R = 18/6 = <strong>3 A</strong> ✓</p>
+                    <p><strong>3.2</strong> I = V/R = 18/3 = <strong>6 A</strong> ✓</p>
+                    <p><strong>3.3</strong> I<sub>R</sub> = 12 - 3 - 6 = 3 A. R = V/I = 18/3 = <strong>6 Ω</strong> ✓</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Worked Example 4 -->
+        <div class="dashboard-section">
+            <h2>Worked Example 4: Power & Energy</h2>
+            <div class="example-box">
+                <p>A household kettle is rated at 2 200 W and operates at 230 V.</p>
+                <p><strong>4.1</strong> Calculate the current drawn. <em>(3)</em></p>
+                <p><strong>4.2</strong> Calculate the resistance of the heating element. <em>(3)</em></p>
+                <p><strong>4.3</strong> Used for 15 minutes. Calculate energy in kWh. <em>(3)</em></p>
+                <p><strong>4.4</strong> If electricity costs R2.15/kWh, calculate the cost. <em>(2)</em></p>
+                <button class="answer-btn" onclick="toggleAnswer('ans4')">Show Answers</button>
+                <div id="ans4" class="answer-box">
+                    <p><strong>4.1</strong> I = P/V = 2200/230 = <strong>9.57 A</strong> ✓</p>
+                    <p><strong>4.2</strong> R = V²/P = 230²/2200 = 52900/2200 = <strong>24.05 Ω</strong> ✓</p>
+                    <p><strong>4.3</strong> E = 2.2 kW × (15/60) h = 2.2 × 0.25 = <strong>0.55 kWh</strong> ✓</p>
+                    <p><strong>4.4</strong> Cost = 0.55 × R2.15 = <strong>R1.18</strong> ✓</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Practice Activity 1 -->
+        <div class="dashboard-section">
+            <h2>📝 Practice Activity 1: Internal Resistance</h2>
+            <div class="practice-box">
+                <p>A cell of emf 1.5 V has an internal resistance of 0.2 Ω. It is connected to a 2.8 Ω resistor.</p>
+                <p><strong>P1.1</strong> Calculate the current. <em>(3)</em></p>
+                <p><strong>P1.2</strong> Calculate the voltmeter reading across the cell terminals. <em>(3)</em></p>
+                <p><strong>P1.3</strong> An additional 2.8 Ω resistor is added in parallel. Calculate the new terminal voltage. <em>(5)</em></p>
+                <p><strong>P1.4</strong> Compare the terminal voltages and explain. <em>(3)</em></p>
+                <button class="answer-btn" onclick="toggleAnswer('ans-p1')">Show Answers</button>
+                <div id="ans-p1" class="answer-box">
+                    <p><strong>P1.1</strong> ε = I(R + r) → 1.5 = I(2.8 + 0.2) → I = 1.5/3 = <strong>0.5 A</strong> ✓</p>
+                    <p><strong>P1.2</strong> V = IR = 0.5 × 2.8 = <strong>1.4 V</strong> ✓</p>
+                    <p><strong>P1.3</strong> R<sub>p</sub> = 2.8/2 = 1.4 Ω. ε = I(1.4 + 0.2) → I = 1.5/1.6 = 0.9375 A. V = 1.5 - (0.9375 × 0.2) = <strong>1.31 V</strong> ✓</p>
+                    <p><strong>P1.4</strong> Terminal voltage dropped from 1.4 V to 1.31 V. Adding a parallel resistor reduces total external resistance, increasing current, which increases the Ir drop. ✓</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Practice Activity 2 -->
+        <div class="dashboard-section">
+            <h2>📝 Practice Activity 2: Series-Parallel Circuit</h2>
+            <div class="practice-box">
+                <p>A 4 Ω and 6 Ω resistor are in parallel. A 3 Ω resistor is in series with them. Battery = 12 V.</p>
+                <p><strong>P2.1</strong> Calculate total resistance. <em>(4)</em></p>
+                <p><strong>P2.2</strong> Calculate total current. <em>(3)</em></p>
+                <p><strong>P2.3</strong> Calculate voltage across the 3 Ω resistor. <em>(3)</em></p>
+                <p><strong>P2.4</strong> Calculate current through the 4 Ω resistor. <em>(3)</em></p>
+                <p><strong>P2.5</strong> Calculate power dissipated in the 6 Ω resistor. <em>(4)</em></p>
+                <button class="answer-btn" onclick="toggleAnswer('ans-p2')">Show Answers</button>
+                <div id="ans-p2" class="answer-box">
+                    <p><strong>P2.1</strong> 1/R<sub>p</sub> = 1/4 + 1/6 = 5/12 → R<sub>p</sub> = 2.4 Ω. R<sub>T</sub> = 3 + 2.4 = <strong>5.4 Ω</strong> ✓</p>
+                    <p><strong>P2.2</strong> I = V/R = 12/5.4 = <strong>2.22 A</strong> ✓</p>
+                    <p><strong>P2.3</strong> V<sub>3Ω</sub> = 2.22 × 3 = <strong>6.67 V</strong> ✓</p>
+                    <p><strong>P2.4</strong> V<sub>parallel</sub> = 12 - 6.67 = 5.33 V. I<sub>4Ω</sub> = 5.33/4 = <strong>1.33 A</strong> ✓</p>
+                    <p><strong>P2.5</strong> I<sub>6Ω</sub> = 5.33/6 = 0.889 A. P = I²R = (0.889)² × 6 = <strong>4.74 W</strong> ✓</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Practice Activity 3 -->
+        <div class="dashboard-section">
+            <h2>📝 Practice Activity 3: V vs I Graph</h2>
+            <div class="practice-box">
+                <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+                    <tr><th style="border:1px solid #ccc; padding:0.5rem;">Current (A)</th><td style="border:1px solid #ccc; padding:0.5rem;">0.0</td><td style="border:1px solid #ccc; padding:0.5rem;">0.5</td><td style="border:1px solid #ccc; padding:0.5rem;">1.0</td><td style="border:1px solid #ccc; padding:0.5rem;">1.5</td><td style="border:1px solid #ccc; padding:0.5rem;">2.0</td><td style="border:1px solid #ccc; padding:0.5rem;">2.5</td></tr>
+                    <tr><th style="border:1px solid #ccc; padding:0.5rem;">Voltage (V)</th><td style="border:1px solid #ccc; padding:0.5rem;">9.0</td><td style="border:1px solid #ccc; padding:0.5rem;">8.5</td><td style="border:1px solid #ccc; padding:0.5rem;">8.0</td><td style="border:1px solid #ccc; padding:0.5rem;">7.5</td><td style="border:1px solid #ccc; padding:0.5rem;">7.0</td><td style="border:1px solid #ccc; padding:0.5rem;">6.5</td></tr>
+                </table>
+                <p><strong>P3.1</strong> Plot V (y) vs I (x) — straight line through (0,9.0) to (2.5,6.5). <em>(4)</em></p>
+                <p><strong>P3.2</strong> Determine the emf from the graph. <em>(2)</em></p>
+                <p><strong>P3.3</strong> Calculate the gradient. <em>(3)</em></p>
+                <p><strong>P3.4</strong> What does the gradient represent? <em>(2)</em></p>
+                <p><strong>P3.5</strong> Write the equation relating V and I. <em>(3)</em></p>
+                <p><strong>P3.6</strong> Calculate short-circuit current. <em>(3)</em></p>
+                <button class="answer-btn" onclick="toggleAnswer('ans-p3')">Show Answers</button>
+                <div id="ans-p3" class="answer-box">
+                    <p><strong>P3.2</strong> y-intercept = <strong>ε = 9.0 V</strong> ✓</p>
+                    <p><strong>P3.3</strong> gradient = (6.5 - 9.0)/(2.5 - 0) = -2.5/2.5 = <strong>-1.0</strong> ✓</p>
+                    <p><strong>P3.4</strong> gradient = -r, so <strong>r = 1.0 Ω</strong> ✓</p>
+                    <p><strong>P3.5</strong> <strong>V = 9 - I</strong> ✓</p>
+                    <p><strong>P3.6</strong> 0 = 9 - I → <strong>I = 9 A</strong> ✓</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Multiple Choice -->
+        <div class="dashboard-section">
+            <h2>📝 Practice Activity 4: Multiple Choice</h2>
+            <div class="practice-box">
+                <div class="mcq"><strong>P4.1</strong> Three resistors of 2 Ω, 3 Ω, and 6 Ω in parallel. Total resistance is:
+                    <label><input type="radio" name="mc1" onclick="showMcAnswer('mc1-ans')"> A) 11 Ω</label>
+                    <label><input type="radio" name="mc1" onclick="showMcAnswer('mc1-ans')"> B) 1 Ω ✅</label>
+                    <label><input type="radio" name="mc1" onclick="showMcAnswer('mc1-ans')"> C) 0.5 Ω</label>
+                    <label><input type="radio" name="mc1" onclick="showMcAnswer('mc1-ans')"> D) 3 Ω</label>
+                    <div id="mc1-ans" style="display:none;color:#16a34a;font-weight:600;">✅ B) 1 Ω — 1/R<sub>T</sub> = 1/2+1/3+1/6 = 1</div>
+                </div>
+                <div class="mcq"><strong>P4.2</strong> A cell with internal resistance r is connected to R. Terminal voltage V is:
+                    <label><input type="radio" name="mc2" onclick="showMcAnswer('mc2-ans')"> A) V = ε</label>
+                    <label><input type="radio" name="mc2" onclick="showMcAnswer('mc2-ans')"> B) V = ε - Ir ✅</label>
+                    <label><input type="radio" name="mc2" onclick="showMcAnswer('mc2-ans')"> C) V = ε + Ir</label>
+                    <label><input type="radio" name="mc2" onclick="showMcAnswer('mc2-ans')"> D) V = Ir</label>
+                    <div id="mc2-ans" style="display:none;color:#16a34a;font-weight:600;">✅ B) V = ε - Ir</div>
+                </div>
+                <div class="mcq"><strong>P4.3</strong> Ohm's Law graph is a:
+                    <label><input type="radio" name="mc3" onclick="showMcAnswer('mc3-ans')"> A) Curve upward</label>
+                    <label><input type="radio" name="mc3" onclick="showMcAnswer('mc3-ans')"> B) Curve downward</label>
+                    <label><input type="radio" name="mc3" onclick="showMcAnswer('mc3-ans')"> C) Straight line through origin ✅</label>
+                    <label><input type="radio" name="mc3" onclick="showMcAnswer('mc3-ans')"> D) Horizontal line</label>
+                    <div id="mc3-ans" style="display:none;color:#16a34a;font-weight:600;">✅ C) Straight line through origin</div>
+                </div>
+                <div class="mcq"><strong>P4.4</strong> Adding more resistors in parallel:
+                    <label><input type="radio" name="mc4" onclick="showMcAnswer('mc4-ans')"> A) Increases total resistance</label>
+                    <label><input type="radio" name="mc4" onclick="showMcAnswer('mc4-ans')"> B) Decreases total resistance ✅</label>
+                    <label><input type="radio" name="mc4" onclick="showMcAnswer('mc4-ans')"> C) Stays the same</label>
+                    <div id="mc4-ans" style="display:none;color:#16a34a;font-weight:600;">✅ B) Decreases — more paths = less opposition</div>
+                </div>
+                <div class="mcq"><strong>P4.5</strong> A 100 W bulb at 230 V draws:
+                    <label><input type="radio" name="mc5" onclick="showMcAnswer('mc5-ans')"> A) 0.43 A ✅</label>
+                    <label><input type="radio" name="mc5" onclick="showMcAnswer('mc5-ans')"> B) 2.3 A</label>
+                    <label><input type="radio" name="mc5" onclick="showMcAnswer('mc5-ans')"> C) 23 A</label>
+                    <div id="mc5-ans" style="display:none;color:#16a34a;font-weight:600;">✅ A) I = 100/230 = 0.43 A</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div style="display:flex; justify-content:space-between; margin: 2rem 0; flex-wrap:wrap; gap:0.5rem;">
+            <a href="../../pages/dashboard-education.html" class="action-btn" style="text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;">← Back to Education</a>
+            <a href="electrodynamics-practice.html" class="action-btn" style="text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;">Next: Electrodynamics 🧲 →</a>
+        </div>
+
+        <footer class="status-bar">
+            <div class="status-item"><span class="status-dot green"></span><span>Grade 12 IEB Physics</span></div>
+            <div class="status-item"><span>Professor Zakeyo 📚</span></div>
+        </footer>
+    </div>
+    <script>
+        function toggleAnswer(id) { document.getElementById(id).classList.toggle('show'); }
+        function showMcAnswer(id) { document.getElementById(id).style.display = 'block'; }
+    </script>
+    <script src="../../assets/js/dashboard.js"></script>
+</body>
+</html>

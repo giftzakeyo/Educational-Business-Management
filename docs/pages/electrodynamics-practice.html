@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrodynamics - Worked Examples | Professor Zakeyo</title>
+    <link rel="stylesheet" href="../../assets/css/dashboard.css">
+    <link rel="stylesheet" href="../../assets/css/page.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .example-box { background: #f0f8ff; border-left: 4px solid #2563eb; padding: 1rem 1.5rem; margin: 1rem 0; border-radius: 0 8px 8px 0; }
+        .practice-box { background: #fefce8; border-left: 4px solid #eab308; padding: 1rem 1.5rem; margin: 1rem 0; border-radius: 0 8px 8px 0; }
+        .answer-box { background: #f0fdf4; border-left: 4px solid #22c55e; padding: 1rem 1.5rem; margin: 1rem 0; border-radius: 0 8px 8px 0; display: none; }
+        .answer-box.show { display: block; }
+        .answer-btn { background: #22c55e; color: white; border: none; padding: 0.4rem 1rem; border-radius: 6px; cursor: pointer; font-size: 0.85rem; }
+        .answer-btn:hover { background: #16a34a; }
+        .mcq { background: #f8fafc; padding: 0.8rem; border-radius: 8px; margin: 0.4rem 0; }
+        .mcq label { display: block; padding: 0.3rem 0.5rem; cursor: pointer; border-radius: 4px; }
+        .mcq label:hover { background: #e2e8f0; }
+        .mcq input { margin-right: 0.5rem; }
+        .key-concept { background: #ede9fe; border-radius: 8px; padding: 0.8rem; margin: 0.4rem 0; border: 1px solid #c4b5fd; }
+        .key-concept strong { color: #6d28d9; }
+        .diagram-box { background: #f1f5f9; padding: 1rem; border-radius: 8px; text-align: center; font-family: monospace; margin: 0.5rem 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="../../pages/dashboard-education.html" class="back-link">← Back to Education</a>
+            <h1>🧲 Electrodynamics — Worked Examples & Practice</h1>
+            <p>Grade 12 IEB Physics | Term 3</p>
+        </div>
+
+        <!-- Key Concepts -->
+        <div class="dashboard-section">
+            <h2>📌 Key Concepts</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0.8rem;">
+                <div class="key-concept"><strong>DC Motor:</strong> Electrical → Kinetic energy. Uses split-ring commutator to reverse current every ½ turn.</div>
+                <div class="key-concept"><strong>AC Generator:</strong> Kinetic → Electrical energy. Uses slip rings for continuous connection.</div>
+                <div class="key-concept"><strong>Fleming's LHR:</strong> Forefinger = Field, Middle finger = Current, Thumb = Force (Motion). For <strong>MOTORS</strong>.</div>
+                <div class="key-concept"><strong>Fleming's RHR:</strong> Forefinger = Field, Thumb = Motion, Middle finger = Induced current. For <strong>GENERATORS</strong>.</div>
+                <div class="key-concept"><strong>RMS Values:</strong> V<sub>rms</sub> = V<sub>max</sub>/√2, I<sub>rms</sub> = I<sub>max</sub>/√2, P<sub>avg</sub> = V<sub>rms</sub> × I<sub>rms</sub></div>
+                <div class="key-concept"><strong>Force on conductor:</strong> F = BIL (conductor perpendicular to magnetic field)</div>
+            </div>
+        </div>
+
+        <!-- Worked Example 1 -->
+        <div class="dashboard-section">
+            <h2>Worked Example 1: DC Motor</h2>
+            <div class="example-box">
+                <p>A DC motor has a coil of 200 turns, each of area 0.05 m², placed in a field of 0.4 T. The coil carries 3 A.</p>
+                <p><strong>1.1</strong> State the energy conversion in a DC motor. <em>(2)</em></p>
+                <p><strong>1.2</strong> When is the coil most effective (maximum torque)? Explain. <em>(3)</em></p>
+                <p><strong>1.3</strong> State Fleming's Left Hand Rule. <em>(2)</em></p>
+                <p><strong>1.4</strong> What is the purpose of the split-ring commutator? <em>(3)</em></p>
+                <button class="answer-btn" onclick="toggleAnswer('ans1')">Show Answers</button>
+                <div id="ans1" class="answer-box">
+                    <p><strong>1.1</strong> Electrical energy → Kinetic (mechanical) energy ✓</p>
+                    <p><strong>1.2</strong> When the coil is <strong>parallel</strong> to the magnetic field — the perpendicular distance between forces is greatest, giving maximum torque. ✓</p>
+                    <p><strong>1.3</strong> Thumb, forefinger, middle finger mutually perpendicular: Forefinger = Field, Middle = Current, Thumb = Force/Motion. ✓</p>
+                    <p><strong>1.4</strong> Reverses current direction every half-turn so the coil keeps rotating in the <strong>same direction</strong>. Without it, the coil would oscillate and stop. ✓</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Worked Example 2 -->
+        <div class="dashboard-section">
+            <h2>Worked Example 2: AC Generator</h2>
+            <div class="example-box">
+                <div class="diagram-box">
+                    Voltage graph: peak = 20 V, oscillates between +20 V and -20 V (sine wave)
+                </div>
+                <p><strong>2.1</strong> What type of current is produced? <em>(1)</em></p>
+                <p><strong>2.2</strong> Determine the peak voltage. <em>(2)</em></p>
+                <p><strong>2.3</strong> Calculate the RMS voltage. <em>(3)</em></p>
+                <p><strong>2.4</strong> Connected to a 10 Ω resistor. Calculate RMS current. <em>(3)</em></p>
+                <p><strong>2.5</strong> Calculate average power. <em>(3)</em></p>
+                <p><strong>2.6</strong> Explain the role of slip rings. <em>(3)</em></p>
+                <button class="answer-btn" onclick="toggleAnswer('ans2')">Show Answers</button>
+                <div id="ans2" class="answer-box">
+                    <p><strong>2.1</strong> Alternating current (AC) ✓</p>
+                    <p><strong>2.2</strong> V<sub>max</sub> = <strong>20 V</strong> ✓</p>
+                    <p><strong>2.3</strong> V<sub>rms</sub> = 20/√2 = <strong>14.14 V</strong> ✓</p>
+                    <p><strong>2.4</strong> I<sub>rms</sub> = 14.14/10 = <strong>1.414 A</strong> ✓</p>
+                    <p><strong>2.5</strong> P<sub>avg</sub> = V<sub>rms</sub> × I<sub>rms</sub> = 14.14 × 1.414 = <strong>20 W</strong> ✓</p>
+                    <p><strong>2.6</strong> Slip rings provide continuous electrical connection between rotating coil and external circuit — they do <strong>NOT</strong> reverse the current, allowing the external current to alternate. ✓</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Practice Activities -->
+        <div class="dashboard-section">
+            <h2>📝 Practice Activity 1: DC Motor</h2>
+            <div class="practice-box">
+                <p><strong>P1.1</strong> Draw a labelled diagram of a simple DC motor showing: coil, magnetic poles, split-ring commutator, brushes, battery. <em>(6)</em></p>
+                <p><strong>P1.2</strong> Describe what happens when current is switched on. <em>(3)</em></p>
+                <p><strong>P1.3</strong> Why is the split-ring commutator essential? <em>(4)</em></p>
+                <p><strong>P1.4</strong> State TWO ways to increase motor speed. <em>(2)</em></p>
+                <button class="answer-btn" onclick="toggleAnswer('ans-p1')">Show Answers</button>
+                <div id="ans-p1" class="answer-box">
+                    <p><strong>P1.1</strong> Diagram must show: N/S poles, rectangular coil, split-ring (2 half-rings), carbon brushes, battery, current direction arrows. ✓</p>
+                    <p><strong>P1.2</strong> Current flows through coil → forces on coil sides in opposite directions (Fleming's LHR) → turning effect (torque) → coil rotates. ✓</p>
+                    <p><strong>P1.3</strong> Reverses current direction every half-turn so forces always rotate coil the same way. Without it, coil would stop at vertical position. ✓</p>
+                    <p><strong>P1.4</strong> 1) Increase current. 2) Increase magnetic field strength (stronger magnets). 3) More turns on coil. ✓ (any two)</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard-section">
+            <h2>📝 Practice Activity 2: AC Generator</h2>
+            <div class="practice-box">
+                <p>An AC alternator produces a sinusoidal output with peak voltage of 100 V.</p>
+                <p><strong>P2.1</strong> Calculate RMS voltage. <em>(3)</em></p>
+                <p><strong>P2.2</strong> Connected to 25 Ω load. Calculate RMS current. <em>(3)</em></p>
+                <p><strong>P2.3</strong> Calculate maximum instantaneous current. <em>(3)</em></p>
+                <p><strong>P2.4</strong> Explain how to increase output voltage (two methods). <em>(4)</em></p>
+                <p><strong>P2.5</strong> Difference between slip rings and split-ring commutator. <em>(4)</em></p>
+                <button class="answer-btn" onclick="toggleAnswer('ans-p2')">Show Answers</button>
+                <div id="ans-p2" class="answer-box">
+                    <p><strong>P2.1</strong> V<sub>rms</sub> = 100/√2 = <strong>70.71 V</strong> ✓</p>
+                    <p><strong>P2.2</strong> I<sub>rms</sub> = 70.71/25 = <strong>2.83 A</strong> ✓</p>
+                    <p><strong>P2.3</strong> I<sub>max</sub> = V<sub>max</sub>/R = 100/25 = <strong>4 A</strong> ✓</p>
+                    <p><strong>P2.4</strong> 1) Increase number of turns on coil. 2) Rotate coil faster. 3) Use stronger magnets. ✓ (any two)</p>
+                    <p><strong>P2.5</strong> <strong>Slip rings</strong> (generators): continuous rings, external current alternates. <strong>Split-ring</strong> (motors): two halves, reverses current each half-turn to maintain rotation direction. ✓</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard-section">
+            <h2>📝 Practice Activity 3: Power in Motors</h2>
+            <div class="practice-box">
+                <p><strong>P3.1</strong> A motor lifts a 50 kg mass 2 m in 4 seconds. Calculate: <em>(6)</em></p>
+                <p style="padding-left:1rem;">3.1.1 Work done (g = 9.8 m·s⁻²)</p>
+                <p style="padding-left:1rem;">3.1.2 Power output of motor</p>
+                <p style="padding-left:1rem;">3.1.3 If 75% efficient, electrical power input</p>
+                <p><strong>P3.2</strong> A motor draws 8 A from a 240 V supply. Calculate: <em>(6)</em></p>
+                <p style="padding-left:1rem;">3.2.1 Electrical power input</p>
+                <p style="padding-left:1rem;">3.2.2 Energy consumed in 30 minutes (kWh)</p>
+                <p style="padding-left:1rem;">3.2.3 Cost at R2.15/kWh</p>
+                <button class="answer-btn" onclick="toggleAnswer('ans-p3')">Show Answers</button>
+                <div id="ans-p3" class="answer-box">
+                    <p><strong>P3.1.1</strong> W = mgh = 50 × 9.8 × 2 = <strong>980 J</strong> ✓</p>
+                    <p><strong>P3.1.2</strong> P = W/t = 980/4 = <strong>245 W</strong> ✓</p>
+                    <p><strong>P3.1.3</strong> P<sub>in</sub> = 245/0.75 = <strong>326.67 W</strong> ✓</p>
+                    <p><strong>P3.2.1</strong> P = VI = 240 × 8 = <strong>1920 W</strong> ✓</p>
+                    <p><strong>P3.2.2</strong> E = 1.92 kW × 0.5 h = <strong>0.96 kWh</strong> ✓</p>
+                    <p><strong>P3.2.3</strong> Cost = 0.96 × R2.15 = <strong>R2.06</strong> ✓</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Multiple Choice -->
+        <div class="dashboard-section">
+            <h2>📝 Practice Activity 4: Multiple Choice</h2>
+            <div class="practice-box">
+                <div class="mcq"><strong>P4.1</strong> Which converts electrical → kinetic energy?
+                    <label><input type="radio" name="mc1" onclick="showMcAnswer('mc1-ans')"> A) Generator</label>
+                    <label><input type="radio" name="mc1" onclick="showMcAnswer('mc1-ans')"> B) Motor ✅</label>
+                    <label><input type="radio" name="mc1" onclick="showMcAnswer('mc1-ans')"> C) Transformer</label>
+                    <div id="mc1-ans" style="display:none;color:#16a34a;font-weight:600;">✅ B) Motor</div>
+                </div>
+                <div class="mcq"><strong>P4.2</strong> Split-ring commutator serves to:
+                    <label><input type="radio" name="mc2" onclick="showMcAnswer('mc2-ans')"> A) Increase magnetic field</label>
+                    <label><input type="radio" name="mc2" onclick="showMcAnswer('mc2-ans')"> B) Reverse current every half-turn ✅</label>
+                    <label><input type="radio" name="mc2" onclick="showMcAnswer('mc2-ans')"> C) Convert AC to DC</label>
+                    <div id="mc2-ans" style="display:none;color:#16a34a;font-weight:600;">✅ B) Reverse current every half-turn</div>
+                </div>
+                <div class="mcq"><strong>P4.3</strong> AC generator uses:
+                    <label><input type="radio" name="mc3" onclick="showMcAnswer('mc3-ans')"> A) Split-ring commutator</label>
+                    <label><input type="radio" name="mc3" onclick="showMcAnswer('mc3-ans')"> B) Slip rings ✅</label>
+                    <label><input type="radio" name="mc3" onclick="showMcAnswer('mc3-ans')"> C) Brushes only</label>
+                    <div id="mc3-ans" style="display:none;color:#16a34a;font-weight:600;">✅ B) Slip rings</div>
+                </div>
+                <div class="mcq"><strong>P4.4</strong> RMS of 200 V peak AC supply:
+                    <label><input type="radio" name="mc4" onclick="showMcAnswer('mc4-ans')"> A) 200 V</label>
+                    <label><input type="radio" name="mc4" onclick="showMcAnswer('mc4-ans')"> B) 283 V</label>
+                    <label><input type="radio" name="mc4" onclick="showMcAnswer('mc4-ans')"> C) 141 V ✅</label>
+                    <div id="mc4-ans" style="display:none;color:#16a34a;font-weight:600;">✅ C) V<sub>rms</sub> = 200/√2 = 141 V</div>
+                </div>
+                <div class="mcq"><strong>P4.5</strong> Fleming's LHR gives direction of:
+                    <label><input type="radio" name="mc5" onclick="showMcAnswer('mc5-ans')"> A) Induced current</label>
+                    <label><input type="radio" name="mc5" onclick="showMcAnswer('mc5-ans')"> B) Force on conductor in B-field ✅</label>
+                    <label><input type="radio" name="mc5" onclick="showMcAnswer('mc5-ans')"> C) EMF in generator</label>
+                    <div id="mc5-ans" style="display:none;color:#16a34a;font-weight:600;">✅ B) Force/motion direction</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div style="display:flex; justify-content:space-between; margin: 2rem 0; flex-wrap:wrap; gap:0.5rem;">
+            <a href="electric-circuits-practice.html" class="action-btn" style="text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;">← Electric Circuits</a>
+            <a href="../../pages/dashboard-education.html" class="action-btn" style="text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;">Back to Education</a>
+            <a href="optical-phenomena-practice.html" class="action-btn" style="text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;">Next: Optical Phenomena 🔦 →</a>
+        </div>
+
+        <footer class="status-bar">
+            <div class="status-item"><span class="status-dot green"></span><span>Grade 12 IEB Physics</span></div>
+            <div class="status-item"><span>Professor Zakeyo 📚</span></div>
+        </footer>
+    </div>
+    <script>
+        function toggleAnswer(id) { document.getElementById(id).classList.toggle('show'); }
+        function showMcAnswer(id) { document.getElementById(id).style.display = 'block'; }
+    </script>
+    <script src="../../assets/js/dashboard.js"></script>
+</body>
+</html>

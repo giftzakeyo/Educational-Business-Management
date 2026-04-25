@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optical Phenomena - Worked Examples | Professor Zakeyo</title>
+    <link rel="stylesheet" href="../../assets/css/dashboard.css">
+    <link rel="stylesheet" href="../../assets/css/page.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .example-box { background: #f0f8ff; border-left: 4px solid #2563eb; padding: 1rem 1.5rem; margin: 1rem 0; border-radius: 0 8px 8px 0; }
+        .practice-box { background: #fefce8; border-left: 4px solid #eab308; padding: 1rem 1.5rem; margin: 1rem 0; border-radius: 0 8px 8px 0; }
+        .answer-box { background: #f0fdf4; border-left: 4px solid #22c55e; padding: 1rem 1.5rem; margin: 1rem 0; border-radius: 0 8px 8px 0; display: none; }
+        .answer-box.show { display: block; }
+        .answer-btn { background: #22c55e; color: white; border: none; padding: 0.4rem 1rem; border-radius: 6px; cursor: pointer; font-size: 0.85rem; }
+        .answer-btn:hover { background: #16a34a; }
+        .mcq { background: #f8fafc; padding: 0.8rem; border-radius: 8px; margin: 0.4rem 0; }
+        .mcq label { display: block; padding: 0.3rem 0.5rem; cursor: pointer; border-radius: 4px; }
+        .mcq label:hover { background: #e2e8f0; }
+        .mcq input { margin-right: 0.5rem; }
+        .key-concept { background: #ede9fe; border-radius: 8px; padding: 0.8rem; margin: 0.4rem 0; border: 1px solid #c4b5fd; }
+        .key-concept strong { color: #6d28d9; }
+        table.data { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+        table.data th, table.data td { border: 1px solid #ccc; padding: 0.5rem; text-align: center; }
+        table.data th { background: #e2e8f0; }
+        .constant-box { background: #1e293b; color: #e2e8f0; padding: 0.8rem 1rem; border-radius: 8px; font-family: monospace; display: inline-block; margin: 0.3rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="../../pages/dashboard-education.html" class="back-link">← Back to Education</a>
+            <h1>🔦 Optical Phenomena — Worked Examples & Practice</h1>
+            <p>Grade 12 IEB Physics | Term 3</p>
+        </div>
+
+        <!-- Constants & Formulas -->
+        <div class="dashboard-section">
+            <h2>📌 Key Constants & Formulas</h2>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;">
+                <span class="constant-box">h = 6.63 × 10⁻³⁴ J·s</span>
+                <span class="constant-box">c = 3 × 10⁸ m·s⁻¹</span>
+                <span class="constant-box">e = 1.6 × 10⁻¹⁹ C</span>
+                <span class="constant-box">mₑ = 9.11 × 10⁻³¹ kg</span>
+                <span class="constant-box">1 eV = 1.6 × 10⁻¹⁹ J</span>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 0.8rem;">
+                <div class="key-concept"><strong>E = hf</strong> — Photon energy from frequency</div>
+                <div class="key-concept"><strong>E = hc/λ</strong> — Photon energy from wavelength</div>
+                <div class="key-concept"><strong>W₀ = hf₀</strong> — Work function at threshold</div>
+                <div class="key-concept"><strong>E<sub>k</sub> = hf - W₀</strong> — Einstein's photoelectric equation</div>
+                <div class="key-concept"><strong>E<sub>k</sub> = ½mv²</strong> — Max kinetic energy from velocity</div>
+            </div>
+        </div>
+
+        <!-- Worked Example 1 -->
+        <div class="dashboard-section">
+            <h2>Worked Example 1: Photon Energy</h2>
+            <div class="example-box">
+                <p>A light source emits radiation with wavelength 500 nm.</p>
+                <p><strong>1.1</strong> Convert 500 nm to metres. <em>(1)</em></p>
+                <p><strong>1.2</strong> Calculate the energy of one photon. <em>(3)</em></p>
+                <p><strong>1.3</strong> Express your answer in eV. <em>(2)</em></p>
+                <p><strong>1.4</strong> What type of EM radiation is this? <em>(1)</em></p>
+                <button class="answer-btn" onclick="toggleAnswer('ans1')">Show Answers</button>
+                <div id="ans1" class="answer-box">
+                    <p><strong>1.1</strong> 500 nm = 500 × 10⁻⁹ = <strong>5.0 × 10⁻⁷ m</strong> ✓</p>
+                    <p><strong>1.2</strong> E = hc/λ = (6.63×10⁻³⁴ × 3×10⁸)/(5.0×10⁻⁷) = <strong>3.98 × 10⁻¹⁹ J</strong> ✓</p>
+                    <p><strong>1.3</strong> E = 3.98×10⁻¹⁹/1.6×10⁻¹⁹ = <strong>2.49 eV</strong> ✓</p>
+                    <p><strong>1.4</strong> Visible light (blue-green, ~500 nm) ✓</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Worked Example 2 -->
+        <div class="dashboard-section">
+            <h2>Worked Example 2: Photoelectric Effect</h2>
+            <div class="example-box">
+                <p>A metal has work function 3.2 × 10⁻¹⁹ J. Light of frequency 1.2 × 10¹⁵ Hz is incident.</p>
+                <p><strong>2.1</strong> Define "work function". <em>(2)</em></p>
+                <p><strong>2.2</strong> Calculate the threshold frequency. <em>(3)</em></p>
+                <p><strong>2.3</strong> Will electrons be ejected? Justify. <em>(4)</em></p>
+                <p><strong>2.4</strong> Calculate max kinetic energy of ejected electrons. <em>(3)</em></p>
+                <p><strong>2.5</strong> Calculate the max speed of ejected electrons. <em>(3)</em></p>
+                <button class="answer-btn" onclick="toggleAnswer('ans2')">Show Answers</button>
+                <div id="ans2" class="answer-box">
+                    <p><strong>2.1</strong> Minimum energy required to eject an electron from the metal surface. ✓</p>
+                    <p><strong>2.2</strong> f₀ = W₀/h = 3.2×10⁻¹⁹/6.63×10⁻³⁴ = <strong>4.83 × 10¹⁴ Hz</strong> ✓</p>
+                    <p><strong>2.3</strong> Incident f = 1.2×10¹⁵ Hz > f₀ = 4.83×10¹⁴ Hz → <strong>YES</strong>, electrons ejected. (E_photon = 7.96×10⁻¹⁹ J > W₀ = 3.2×10⁻¹⁹ J) ✓</p>
+                    <p><strong>2.4</strong> E<sub>k</sub> = hf - W₀ = 7.96×10⁻¹⁹ - 3.2×10⁻¹⁹ = <strong>4.76 × 10⁻¹⁹ J</strong> ✓</p>
+                    <p><strong>2.5</strong> v = √(2E<sub>k</sub>/m) = √(2×4.76×10⁻¹⁹/9.11×10⁻³¹) = <strong>1.02 × 10⁶ m·s⁻¹</strong> ✓</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Worked Example 3 -->
+        <div class="dashboard-section">
+            <h2>Worked Example 3: Photoelectric Graph (IEB Favourite)</h2>
+            <div class="example-box">
+                <table class="data">
+                    <tr><th>f (×10¹⁴ Hz)</th><td>4.0</td><td>5.0</td><td>6.0</td><td>7.0</td><td>8.0</td><td>9.0</td></tr>
+                    <tr><th>E<sub>k(max)</sub> (×10⁻¹⁹ J)</th><td>0.0</td><td>0.7</td><td>2.0</td><td>3.3</td><td>4.6</td><td>5.9</td></tr>
+                </table>
+                <p><strong>3.1</strong> Plot E<sub>k</sub> vs f — straight line from (4,0) to (9,5.9). <em>(4)</em></p>
+                <p><strong>3.2</strong> Determine threshold frequency from graph. <em>(2)</em></p>
+                <p><strong>3.3</strong> Calculate the gradient. <em>(3)</em></p>
+                <p><strong>3.4</strong> What does the gradient represent? <em>(2)</em></p>
+                <p><strong>3.5</strong> Determine the work function. <em>(3)</em></p>
+                <p><strong>3.6</strong> Write Einstein's photoelectric equation using your values. <em>(2)</em></p>
+                <button class="answer-btn" onclick="toggleAnswer('ans3')">Show Answers</button>
+                <div id="ans3" class="answer-box">
+                    <p><strong>3.2</strong> x-intercept = <strong>f₀ = 4.0 × 10¹⁴ Hz</strong> ✓</p>
+                    <p><strong>3.3</strong> gradient = (5.9 - 0.0)×10⁻¹⁹/(9.0 - 4.0)×10¹⁴ = 5.9×10⁻¹⁹/5.0×10¹⁴ = <strong>1.18 × 10⁻³³</strong> (≈ h = 6.63×10⁻³⁴ J·s) ✓</p>
+                    <p><strong>3.4</strong> Gradient = <strong>Planck's constant (h)</strong>. Equation E<sub>k</sub> = hf - W₀ is in form y = mx + c. ✓</p>
+                    <p><strong>3.5</strong> W₀ = hf₀ = (6.63×10⁻³⁴)(4.0×10¹⁴) = <strong>2.65 × 10⁻¹⁹ J</strong> ✓</p>
+                    <p><strong>3.6</strong> <strong>E<sub>k</sub> = (6.63×10⁻³⁴)f - 2.65×10⁻¹⁹</strong> ✓</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Practice Activity 1 -->
+        <div class="dashboard-section">
+            <h2>📝 Practice Activity 1: Photon Calculations</h2>
+            <div class="practice-box">
+                <p><strong>P1.1</strong> Energy of blue light photon (f = 6.5 × 10¹⁴ Hz). <em>(3)</em></p>
+                <p><strong>P1.2</strong> Photon energy 4.5 × 10⁻¹⁹ J. Calculate wavelength in nm. <em>(4)</em></p>
+                <p><strong>P1.3</strong> Which has more energy: red (700 nm) or violet (400 nm)? Show calculations. <em>(4)</em></p>
+                <p><strong>P1.4</strong> Number of photons per second from a 60 W green light source (λ = 550 nm). <em>(5)</em></p>
+                <button class="answer-btn" onclick="toggleAnswer('ans-p1')">Show Answers</button>
+                <div id="ans-p1" class="answer-box">
+                    <p><strong>P1.1</strong> E = hf = (6.63×10⁻³⁴)(6.5×10¹⁴) = <strong>4.31 × 10⁻¹⁹ J</strong> ✓</p>
+                    <p><strong>P1.2</strong> λ = hc/E = (6.63×10⁻³⁴ × 3×10⁸)/(4.5×10⁻¹⁹) = 4.42×10⁻⁷ m = <strong>442 nm</strong> ✓</p>
+                    <p><strong>P1.3</strong> Red: E = (6.63×10⁻³⁴ × 3×10⁸)/(700×10⁻⁹) = 2.84×10⁻¹⁹ J. Violet: E = 4.97×10⁻¹⁹ J. <strong>Violet has MORE energy</strong> (shorter λ) ✓</p>
+                    <p><strong>P1.4</strong> E/photon = hc/λ = 3.62×10⁻¹⁹ J. Number = 60/3.62×10⁻¹⁹ = <strong>1.66 × 10²⁰ photons/s</strong> ✓</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Practice Activity 2 -->
+        <div class="dashboard-section">
+            <h2>📝 Practice Activity 2: Photoelectric Effect</h2>
+            <div class="practice-box">
+                <p>Light of frequency 8.0 × 10¹⁴ Hz on sodium (work function = 2.28 eV).</p>
+                <p><strong>P2.1</strong> Convert work function to joules. <em>(2)</em></p>
+                <p><strong>P2.2</strong> Calculate threshold frequency. <em>(3)</em></p>
+                <p><strong>P2.3</strong> Will emission occur? Show. <em>(3)</em></p>
+                <p><strong>P2.4</strong> Calculate max KE in J and eV. <em>(4)</em></p>
+                <p><strong>P2.5</strong> Effect of doubling intensity on: KE of electrons? Number of electrons? <em>(4)</em></p>
+                <button class="answer-btn" onclick="toggleAnswer('ans-p2')">Show Answers</button>
+                <div id="ans-p2" class="answer-box">
+                    <p><strong>P2.1</strong> W₀ = 2.28 × 1.6×10⁻¹⁹ = <strong>3.65 × 10⁻¹⁹ J</strong> ✓</p>
+                    <p><strong>P2.2</strong> f₀ = W₀/h = 3.65×10⁻¹⁹/6.63×10⁻³⁴ = <strong>5.51 × 10¹⁴ Hz</strong> ✓</p>
+                    <p><strong>P2.3</strong> 8.0×10¹⁴ > 5.51×10¹⁴ → <strong>YES</strong> ✓</p>
+                    <p><strong>P2.4</strong> E<sub>k</sub> = (6.63×10⁻³⁴ × 8.0×10¹⁴) - 3.65×10⁻¹⁹ = 5.30×10⁻¹⁹ - 3.65×10⁻¹⁹ = <strong>1.65×10⁻¹⁹ J = 1.03 eV</strong> ✓</p>
+                    <p><strong>P2.5</strong> KE <strong>unchanged</strong> (depends on frequency). Number of electrons <strong>increases</strong> (more photons). ✓</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- MCQs -->
+        <div class="dashboard-section">
+            <h2>📝 Practice Activity 4: Multiple Choice</h2>
+            <div class="practice-box">
+                <div class="mcq"><strong>P4.1</strong> Correct formula for photon energy?
+                    <label><input type="radio" name="mc1" onclick="showMcAnswer('mc1-ans')"> A) E = hλ</label>
+                    <label><input type="radio" name="mc1" onclick="showMcAnswer('mc1-ans')"> B) E = hf ✅</label>
+                    <label><input type="radio" name="mc1" onclick="showMcAnswer('mc1-ans')"> C) E = h/f</label>
+                    <div id="mc1-ans" style="display:none;color:#16a34a;font-weight:600;">✅ B) E = hf</div>
+                </div>
+                <div class="mcq"><strong>P4.2</strong> Work function 4.0×10⁻¹⁹ J. Threshold frequency?
+                    <label><input type="radio" name="mc2" onclick="showMcAnswer('mc2-ans')"> A) 6.04 × 10¹⁴ Hz ✅</label>
+                    <label><input type="radio" name="mc2" onclick="showMcAnswer('mc2-ans')"> B) 1.66 × 10⁻⁵⁴ Hz</label>
+                    <label><input type="radio" name="mc2" onclick="showMcAnswer('mc2-ans')"> C) 2.65 × 10⁻¹⁵ Hz</label>
+                    <div id="mc2-ans" style="display:none;color:#16a34a;font-weight:600;">✅ A) f₀ = 4.0×10⁻¹⁹/6.63×10⁻³⁴ = 6.04×10¹⁴ Hz</div>
+                </div>
+                <div class="mcq"><strong>P4.3</strong> Below threshold frequency:
+                    <label><input type="radio" name="mc3" onclick="showMcAnswer('mc3-ans')"> A) Low KE electrons</label>
+                    <label><input type="radio" name="mc3" onclick="showMcAnswer('mc3-ans')"> B) No electrons ejected ✅</label>
+                    <label><input type="radio" name="mc3" onclick="showMcAnswer('mc3-ans')"> C) Electrons return</label>
+                    <div id="mc3-ans" style="display:none;color:#16a34a;font-weight:600;">✅ B) No electrons ejected</div>
+                </div>
+                <div class="mcq"><strong>P4.4</strong> Increasing intensity above threshold:
+                    <label><input type="radio" name="mc4" onclick="showMcAnswer('mc4-ans')"> A) Increases KE</label>
+                    <label><input type="radio" name="mc4" onclick="showMcAnswer('mc4-ans')"> B) Increases number of electrons ✅</label>
+                    <label><input type="radio" name="mc4" onclick="showMcAnswer('mc4-ans')"> C) Decreases work function</label>
+                    <div id="mc4-ans" style="display:none;color:#16a34a;font-weight:600;">✅ B) More photons = more electrons</div>
+                </div>
+                <div class="mcq"><strong>P4.5</strong> Emission spectrum consists of:
+                    <label><input type="radio" name="mc5" onclick="showMcAnswer('mc5-ans')"> A) Continuous band</label>
+                    <label><input type="radio" name="mc5" onclick="showMcAnswer('mc5-ans')"> B) Bright lines on dark background ✅</label>
+                    <label><input type="radio" name="mc5" onclick="showMcAnswer('mc5-ans')"> C) Dark lines on continuous</label>
+                    <div id="mc5-ans" style="display:none;color:#16a34a;font-weight:600;">✅ B) Bright lines on dark background</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div style="display:flex; justify-content:space-between; margin: 2rem 0; flex-wrap:wrap; gap:0.5rem;">
+            <a href="electrodynamics-practice.html" class="action-btn" style="text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;">← Electrodynamics</a>
+            <a href="../../pages/dashboard-education.html" class="action-btn" style="text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;">Back to Education</a>
+        </div>
+
+        <footer class="status-bar">
+            <div class="status-item"><span class="status-dot green"></span><span>Grade 12 IEB Physics</span></div>
+            <div class="status-item"><span>Professor Zakeyo 📚</span></div>
+        </footer>
+    </div>
+    <script>
+        function toggleAnswer(id) { document.getElementById(id).classList.toggle('show'); }
+        function showMcAnswer(id) { document.getElementById(id).style.display = 'block'; }
+    </script>
+    <script src="../../assets/js/dashboard.js"></script>
+</body>
+</html>
