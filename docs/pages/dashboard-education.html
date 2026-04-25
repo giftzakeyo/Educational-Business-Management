@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Dashboard - Professor Zakeyo</title>
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+    <link rel="stylesheet" href="../assets/css/page.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="../index.html" class="back-link">← Back to Home</a>
+            <h1>📚 Education Dashboard</h1>
+        </div>
+
+        <!-- Status Overview -->
+        <div class="dashboard-section">
+            <h2>🎯 Current Focus: Term 3 Physics (Grade 12 IEB)</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>✅ Complete</h3>
+                    <ul>
+                        <li>Physics: Waves (8 weeks)</li>
+                        <li>Physics: Newton's Laws (4 weeks)</li>
+                        <li>Chemistry: All 6 topics</li>
+                        <li>Lesson plan templates</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3>🔄 In Progress</h3>
+                    <ul>
+                        <li>Physics Term 3 - Ready to start</li>
+                        <li>Mathematics resources - Planning</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3>⏳ Planned</h3>
+                    <ul>
+                        <li>Electric Circuits</li>
+                        <li>Electrodynamics</li>
+                        <li>Optical Phenomena</li>
+                        <li>Modern Physics</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Physics Progress -->
+        <div class="dashboard-section">
+            <h2>⚡ Physics Materials Progress</h2>
+            <div class="progress-item">
+                <div class="progress-header">
+                    <span>Waves (Complete)</span>
+                    <span>100% ✅</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill blue" data-width="100%" style="width: 100%;"></div>
+                </div>
+            </div>
+            <div class="progress-item">
+                <div class="progress-header">
+                    <span>Newton's Laws (Complete)</span>
+                    <span>100% ✅</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill green" data-width="100%" style="width: 100%;"></div>
+                </div>
+            </div>
+            <div class="progress-item">
+                <div class="progress-header">
+                    <span>Term 3: Electric Circuits</span>
+                    <span>0% ⏳</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill orange" data-width="0%" style="width: 0%;"></div>
+                </div>
+            </div>
+            <div class="progress-item">
+                <div class="progress-header">
+                    <span>Term 3: Electrodynamics</span>
+                    <span>0% ⏳</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill orange" data-width="0%" style="width: 0%;"></div>
+                </div>
+            </div>
+            <div class="progress-item">
+                <div class="progress-header">
+                    <span>Term 3: Optical Phenomena</span>
+                    <span>0% ⏳</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill orange" data-width="0%" style="width: 0%;"></div>
+                </div>
+            </div>
+            <div class="progress-item">
+                <div class="progress-header">
+                    <span>Term 3: Modern Physics</span>
+                    <span>0% ⏳</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill orange" data-width="0%" style="width: 0%;"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chemistry -->
+        <div class="dashboard-section">
+            <h2>🧪 Chemistry - All Complete!</h2>
+            <div class="status-grid">
+                <div class="status-item-box">
+                    <span class="status-icon">⚗️</span>
+                    <div class="status-text"><strong>Chemical Kinetics</strong><span>✅ Complete</span></div>
+                </div>
+                <div class="status-item-box">
+                    <span class="status-icon">🔥</span>
+                    <div class="status-text"><strong>Energy & Chemical Change</strong><span>✅ Complete</span></div>
+                </div>
+                <div class="status-item-box">
+                    <span class="status-icon">⚖️</span>
+                    <div class="status-text"><strong>Chemical Equilibrium</strong><span>✅ Complete</span></div>
+                </div>
+                <div class="status-item-box">
+                    <span class="status-icon">🧪</span>
+                    <div class="status-text"><strong>Acids and Bases</strong><span>✅ Complete</span></div>
+                </div>
+                <div class="status-item-box">
+                    <span class="status-icon">⚡</span>
+                    <div class="status-text"><strong>Electrochemistry</strong><span>✅ Complete</span></div>
+                </div>
+                <div class="status-item-box">
+                    <span class="status-icon">🧬</span>
+                    <div class="status-text"><strong>Organic Chemistry</strong><span>✅ Complete</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Learning Todo -->
+        <div class="dashboard-section">
+            <h2>📋 Education Tasks</h2>
+            <ul class="todo-list">
+                <li class="todo-item">
+                    <label><input type="checkbox" id="edu-1"> <span class="todo-text">Start Physics Term 3 - Electric Circuits</span></label>
+                </li>
+                <li class="todo-item">
+                    <label><input type="checkbox" id="edu-2"> <span class="todo-text">Create simplified student guide for Electric Circuits</span></label>
+                </li>
+                <li class="todo-item">
+                    <label><input type="checkbox" id="edu-3"> <span class="todo-text">Build worksheet with IEB-style questions</span></label>
+                </li>
+                <li class="todo-item">
+                    <label><input type="checkbox" id="edu-4"> <span class="todo-text">Create exam preparation package</span></label>
+                </li>
+            </ul>
+        </div>
+
+        <footer class="status-bar">
+            <div class="status-item">
+                <span class="status-dot green"></span>
+                <span>System Active</span>
+            </div>
+            <div class="status-item">
+                <span>Ready for Physics Term 3</span>
+            </div>
+        </footer>
+    </div>
+    <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>

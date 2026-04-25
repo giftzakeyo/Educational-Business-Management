@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professor Zakeyo - Education & Business Dashboard</title>
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo-area">
+                    <span class="logo-icon">🧪</span>
+                    <div>
+                        <h1>Professor Zakeyo</h1>
+                        <p class="subtitle">Education & Business Management System</p>
+                    </div>
+                </div>
+                <div class="user-info">
+                    <span class="user-badge">Gift</span>
+                    <span id="current-date" class="date-badge"></span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Quick Stats -->
+        <section class="quick-stats">
+            <div class="stat-card education">
+                <div class="stat-icon">📚</div>
+                <div class="stat-content">
+                    <span class="stat-value" id="lessons-count">240+</span>
+                    <span class="stat-label">Lessons Created</span>
+                </div>
+            </div>
+            <div class="stat-card business">
+                <div class="stat-icon">🚐</div>
+                <div class="stat-content">
+                    <span class="stat-value" id="topics-count">6</span>
+                    <span class="stat-label">Chemistry Topics</span>
+                </div>
+            </div>
+            <div class="stat-card personal">
+                <div class="stat-icon">🎓</div>
+                <div class="stat-content">
+                    <span class="stat-value" id="resources-count">74+</span>
+                    <span class="stat-label">Files Organized</span>
+                </div>
+            </div>
+            <div class="stat-card achievement">
+                <div class="stat-icon">✅</div>
+                <div class="stat-content">
+                    <span class="stat-value" id="completion">100%</span>
+                    <span class="stat-label">System Ready</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Navigation -->
+        <section class="nav-cards">
+            <a href="pages/dashboard-main.html" class="nav-card main">
+                <span class="nav-icon">🎯</span>
+                <span class="nav-title">Main Dashboard</span>
+                <span class="nav-desc">Overview of everything</span>
+            </a>
+            <a href="pages/dashboard-education.html" class="nav-card education-card">
+                <span class="nav-icon">📚</span>
+                <span class="nav-title">Education</span>
+                <span class="nav-desc">IEB Physics, Chemistry, Math</span>
+            </a>
+            <a href="pages/dashboard-business.html" class="nav-card business-card">
+                <span class="nav-icon">🚐</span>
+                <span class="nav-title">Business</span>
+                <span class="nav-desc">MG Cape Travel and Tours</span>
+            </a>
+            <a href="pages/dashboard-personal.html" class="nav-card personal-card">
+                <span class="nav-icon">👤</span>
+                <span class="nav-title">Personal</span>
+                <span class="nav-desc">Qualifications & Tracking</span>
+            </a>
+        </section>
+
+        <!-- Quick Actions -->
+        <section class="quick-actions">
+            <h2>⚡ Quick Actions</h2>
+            <div class="action-grid">
+                <button class="action-btn" onclick="window.open('https://github.com/giftzakeyo/Educational-Business-Management')">
+                    <span class="action-icon">📂</span>
+                    GitHub Repository
+                </button>
+                <button class="action-btn" onclick="window.open('https://github.com/giftzakeyo/Educational-Business-Management/blob/main/docs/Github_Upload_Guide.md')">
+                    <span class="action-icon">📤</span>
+                    How To Upload Files
+                </button>
+                <button class="action-btn" onclick="window.open('https://mail.google.com/')">
+                    <span class="action-icon">📧</span>
+                    Check Email
+                </button>
+                <button class="action-btn" onclick="window.open('pages/tourism-meeting.html')">
+                    <span class="action-icon">🤝</span>
+                    Tourism Meeting Prep
+                </button>
+            </div>
+        </section>
+
+        <!-- Recent Activity Feed -->
+        <section class="activity-feed">
+            <h2>📋 Recent Activity</h2>
+            <div class="activity-list">
+                <div class="activity-item">
+                    <span class="activity-date">Apr 25</span>
+                    <span class="activity-text">✅ Physics Term 3 materials ready for creation - Electric Circuits, Electrodynamics, Optics, Modern Physics</span>
+                </div>
+                <div class="activity-item">
+                    <span class="activity-date">Apr 23</span>
+                    <span class="activity-text">✅ Dashboard system created - Main, Education, Business, Personal</span>
+                </div>
+                <div class="activity-item">
+                    <span class="activity-date">Apr 23</span>
+                    <span class="activity-text">✅ GitHub account created - giftzakeyo</span>
+                </div>
+                <div class="activity-item">
+                    <span class="activity-date">Apr 08</span>
+                    <span class="activity-text">✅ All 6 IEB Chemistry topics completed</span>
+                </div>
+                <div class="activity-item">
+                    <span class="activity-date">Apr 08</span>
+                    <span class="activity-text">✅ MG Cape Travel and Tours - Tourism Department meeting preparation</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Learning Journal Note -->
+        <section class="journal-note">
+            <h2>📝 Learning Journal</h2>
+            <div class="journal-entry">
+                <p><strong>What we're tracking:</strong> All lessons, mistakes, improvements, and decisions are being recorded in our Learning Journal. Every concept we cover, every error we fix, every improvement we make - it's all saved.</p>
+                <p><strong>Current focus:</strong> Physics Term 3 (Grade 12 IEB) - Ready to start when you are!</p>
+                <p><strong>Company:</strong> MG Cape Travel and Tours (Pty) Ltd registered ✅ (14 Apr 2026)</p>
+                <p><strong>Backup:</strong> ✅ Automatic versioned backup system active</p>
+            </div>
+        </section>
+
+        <!-- Status Footer -->
+        <footer class="status-bar">
+            <div class="status-item">
+                <span class="status-dot green"></span>
+                <span>System Active</span>
+            </div>
+            <div class="status-item">
+                <span>Last updated: April 25, 2026</span>
+            </div>
+            <div class="status-item">
+                <span>💰 Budget: R0 (100% free setup)</span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="assets/js/dashboard.js"></script>
+</body>
+</html>
